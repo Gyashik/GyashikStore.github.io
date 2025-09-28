@@ -6,102 +6,93 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Меняем шрифт на Roboto */
-    background-color: #f4f4f4; /* Светлый серый фон */
-    color: #333; /* Цвет текста */
-    line-height: 1.6; /* Межстрочный интервал */
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 .container {
-    max-width: 1200px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование по горизонтали */
-    padding: 20px; /* Внутренние отступы */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Шапка сайта */
 .header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    background-color: #ffffff; /* Белый фон шапки */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тонкая тень */
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #3c8dbc; /* Акцентный синий цвет */
-}
-
-.navbar ul {
-    list-style-type: none; /* Убираем маркеры списков */
+.navigation ul {
+    list-style: none;
     display: flex;
-    gap: 20px; /* Расстояние между элементами */
+    gap: 1rem;
 }
 
-.navbar li a {
-    color: inherit; /* Наследует цвет родителя */
-    text-decoration: none; /* Убирает подчеркивание ссылок */
-    transition: all 0.3s ease-in-out; /* Плавный эффект перехода */
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.navbar li a:hover {
-    color: #3c8dbc; /* Меняет цвет ссылки при наведении */
+.navigation a:hover {
+    color: #ffcc00;
 }
 
-.main-section {
-    padding: 20px 0;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.section-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #3c8dbc;
-}
-
-.paragraph-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3c8dbc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-    background-color: #357ab7;
-}
-
-.footer {
+/* Герой блока */
+.hero {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
+    color: #fff;
+    padding: 3rem 0;
     text-align: center;
 }
 
-.footer p {
-    font-size: 14px;
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Медиа-запросы для адаптации на мобильные устройства */
-@media screen and (max-width: 768px) {
-    .navbar ul {
+.btn-primary:hover {
+    background-color: #ffb300;
+}
+
+/* Блок "О нас" */
+.about {
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+/* Блок "Услуги" */
+.services {
+    padding: 2rem 0;
+    background-color: #f4f4f4;
+}
+
+/* Блок "Контакты" */
+.contact {
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Мобильная адаптация */
+@media only screen and (max-width: 768px) {
+    .navigation ul {
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
