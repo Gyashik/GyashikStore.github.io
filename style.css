@@ -1,3 +1,4 @@
+/* Базовые стили */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,38 +6,102 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    color: #333;
+    font-family: 'Roboto', sans-serif; /* Меняем шрифт на Roboto */
+    background-color: #f4f4f4; /* Светлый серый фон */
+    color: #333; /* Цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    padding: 20px; /* Внутренние отступы */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #ffffff; /* Белый фон шапки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тонкая тень */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3c8dbc; /* Акцентный синий цвет */
+}
+
+.navbar ul {
+    list-style-type: none; /* Убираем маркеры списков */
+    display: flex;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.navbar li a {
+    color: inherit; /* Наследует цвет родителя */
+    text-decoration: none; /* Убирает подчеркивание ссылок */
+    transition: all 0.3s ease-in-out; /* Плавный эффект перехода */
+}
+
+.navbar li a:hover {
+    color: #3c8dbc; /* Меняет цвет ссылки при наведении */
+}
+
+.main-section {
+    padding: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3c8dbc;
+}
+
+.paragraph-text {
+    font-size: 16px;
     line-height: 1.6;
+    color: #555;
 }
 
-header h1 {
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #357ab7;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
 }
 
-.content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+.footer p {
+    font-size: 14px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ddd;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+/* Медиа-запросы для адаптации на мобильные устройства */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-a {
-    color: blue;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    .container {
+        padding: 10px;
+    }
 }
